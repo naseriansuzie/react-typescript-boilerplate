@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0
+  }
+}
