@@ -6,6 +6,7 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'production',
+  devtool: 'source-map',
   optimization: {
     minimizer: [
       new TerserPlugin({
@@ -18,5 +19,4 @@ module.exports = merge(common, {
       new CssMinimizerPlugin(),
     ],
   },
-  //   devtool: "hidden-source-map",
 });
