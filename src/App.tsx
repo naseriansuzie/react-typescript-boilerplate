@@ -1,14 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const StyledTitle = styled.h1`
-  color: gold;
-`;
+import GlobalStyle from '@styles/globalStyle';
 
 function App() {
   return (
     <>
-      <StyledTitle>Without CRA 메롱</StyledTitle>
+      <GlobalStyle />
+      <div>Hello :)</div>
     </>
   );
 }
