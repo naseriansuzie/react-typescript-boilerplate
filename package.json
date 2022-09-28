@@ -7,12 +7,27 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js --progress",
     "dev": "webpack-dev-server --config webpack.dev.js --open --hot",
-    "start": "webpack --config webpack.dev.js --progress"
+    "start": "webpack --config webpack.dev.js --progress",
+    "format": "prettier --write '**/*.{js,ts,tsx}'",
+    "lint": "eslint --fix",
+    "type-check": "tsc"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
