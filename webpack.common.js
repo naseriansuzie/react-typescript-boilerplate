@@ -1,12 +1,17 @@
 'use strict';
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
 
 module.exports = {
   entry: './src/index.tsx',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    alias: {
+      '@components': path.resolve(__dirname, './src/components'),
+      '@styles': path.resolve(__dirname, './src/styles'),
+    },
   },
   module: {
     rules: [
@@ -30,9 +35,9 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new CleanWebpackPlugin(),
   ],
 };
