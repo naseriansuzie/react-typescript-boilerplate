@@ -9,8 +9,13 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     alias: {
+      '@assets': path.resolve(__dirname, './src/assets'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
+      '@pages': path.resolve(__dirname, './src/pages'),
       '@styles': path.resolve(__dirname, './src/styles'),
+      '@type': path.resolve(__dirname, './src/types'),
+      '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
   module: {
@@ -21,10 +26,18 @@ module.exports = {
         exclude: ['/node_modules/'],
       },
       {
+        test: /\.svg$/,
+        use: '@svgr/webpack',
+      },
+      {
         test: /\.(png|jpe?g|gif)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
+            options: {
+              publicPath: './dist/',
+              name: 'images/[name].[ext]?[hash]',
+            },
           },
         ],
       },
