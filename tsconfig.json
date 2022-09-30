@@ -22,10 +22,16 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "baseUrl": "./",
     "paths": {
+      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@styles/*": ["src/styles/*"]
-    }
+      "@hooks/*": ["src/hooks/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"],
+      "@type/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "typeRoots": ["vendor.d.ts"]
   },
-  "include": ["src", "**/*.d.ts"],
+  "include": ["src", "**/*.d.ts", "vendor.d.ts"],
   "exclude": ["node_modules"]
 }
