@@ -16,7 +16,7 @@
       "jsx": true,
       "modules": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "parser": "@typescript-eslint/parser",
