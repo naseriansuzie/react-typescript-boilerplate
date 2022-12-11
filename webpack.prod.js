@@ -10,8 +10,10 @@ module.exports = merge(common, {
   optimization: {
     minimizer: [
       new TerserPlugin({
+        minify: TerserPlugin.swcMinify,
         terserOptions: {
           compress: {
+            dead_code: true,
             drop_console: true,
           },
         },
