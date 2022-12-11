@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const { HotModuleReplacementPlugin } = require('webpack');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
@@ -12,6 +13,6 @@ module.exports = merge(common, {
     },
     historyApiFallback: true,
     port: 3000,
-    hot: true,
   },
+  plugins: [new HotModuleReplacementPlugin()],
 });
