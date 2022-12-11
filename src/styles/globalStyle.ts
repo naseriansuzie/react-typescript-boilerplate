@@ -3,12 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle` 
   html,
   body {
-    font-size: 62.5%;
-    box-sizing: border-box;
     min-width: 375px;
-    border:0;
+    box-sizing: border-box;
     padding:0;
+    border:0;
     margin: 0;
+    font-size: 62.5%;
   }
 
   * {
@@ -17,19 +17,19 @@ const GlobalStyle = createGlobalStyle`
 
   html, body, div, span, h1, h2, h3, h4, h5, h6, p,
   a, dl, dt, dd, ol, ul, li, form, label, table {
-    margin: 0;
     padding: 0;
     border: 0;
+    margin: 0;
     vertical-align: baseline;
   }
   
   button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin: 0;
     padding: 0;
+    border: none;
+    margin: 0;
+    background-color: transparent;
     cursor: pointer;
+    outline: none;
     -webkit-tap-highlight-color : transparent;
   }
 
@@ -38,8 +38,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a, a:visited {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
   }
 `;
 
